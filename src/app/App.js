@@ -1,28 +1,13 @@
 import React, { Component } from "react";
+import TimeToReact from "./TimeToReact/TimeToReact";
+
+import "./App.css";
 
 class App extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            currentTime: new Date()
-        }
-    }
-
-    tick() {
-        this.setState({
-            currentTime: new Date()
-        });
-    }
-
-    componentDidMount() {
-        this.interval = setInterval(() => this.tick(), 1000);
-    }
-
-
     render() {
-        return <div>
-            <h1>Time {this.state.currentTime.toLocaleTimeString()}</h1>
+        return <div className="container">
+            <TimeToReact />
         </div>
     }
 }
