@@ -52,7 +52,8 @@ class Stopwatch extends Component {
         let pausedMS = new Date().getTime() - this.state.pausedTime.getTime()
         this.setState({
             startTime: new Date(this.state.startTime.getTime() + pausedMS),
-            pausedTime:null
+            pausedTime:null,
+            status:'ticking'
         })
         this.startTicking()
     }
@@ -73,7 +74,8 @@ class Stopwatch extends Component {
         clearInterval(this.interval)
         this.setState({
             startTime:null,
-            elapsedMS:0
+            elapsedMS:0,
+            status:'not-ticking'
         })
     }
 
@@ -85,9 +87,9 @@ class Stopwatch extends Component {
         return <div className="d-flex align-items-center justify-content-center h-100">
             <div>
                 <div className="countdown">{this.msToTime(this.state.elapsedMS)}</div>
-                <div className="d-flex mt-10">
-    <button onClick={this.toggle}>{this.state.status === 'ticking'? 'Pause':'Start'}</button>
-                    <button onClick={this.reset} >Reset</button>
+                <div className="d-flex justify-content-center actions">
+                    <button className="toggle-btn mr-35" onClick={this.toggle}>{this.state.status === 'ticking'? 'Pause':'Start'}</button>
+                    <button className="reset-btn" onClick={this.reset} >Reset</button>
                 </div>
             </div>
         </div>

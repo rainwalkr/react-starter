@@ -1,3 +1,31 @@
 .countdown{
     font-size: 55px;
 }
+
+.toggle-btn{
+    padding: 5px;
+    width: 75px;
+    background: #61dafb;
+    font-size: 17px;
+    font-family: monospace;
+    border:none;
+    color: #20232a;
+    height:37px;
+    border-radius: 2px;
+}
+
+.reset-btn{
+    padding: 5px;
+    width: 75px;
+    background: #fff;
+    font-size: 17px;
+    font-family: monospace;
+    border:none;
+    color: #20232a;
+    height:37px;
+    border-radius: 2px;
+}
+
+.actions{
+    margin-top: 30px;
+}
