@@ -14,7 +14,7 @@ class App extends Component {
         this.handleTextClick = this.handleTextClick.bind(this) 
     }
 
-    handleTextClick(){
+    handleTextClick = _ => {
         this.setState({
             page:'stopwatch'
         })

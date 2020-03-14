@@ -11,10 +11,6 @@ class Stopwatch extends Component {
             pausedTime:null,
             status:'not-ticking'
         }
-
-        this.start = this.start.bind(this)
-        this.reset = this.reset.bind(this)
-        this.toggle = this.toggle.bind(this)
     }
 
     tick() {
@@ -58,7 +54,7 @@ class Stopwatch extends Component {
         this.startTicking()
     }
 
-    toggle(){
+    toggle = () => {
 
         if (!this.state.startTime) {
             this.start();
@@ -70,7 +66,7 @@ class Stopwatch extends Component {
 
     }
 
-    reset(){
+    reset = _ => {
         clearInterval(this.interval)
         this.setState({
             startTime:null,
