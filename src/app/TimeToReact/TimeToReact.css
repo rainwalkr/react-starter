@@ -1,8 +1,20 @@
 .catchy-text{
     font-size: 36px;
     color: #70798d;
+    text-align: center;
 }
 
 .time{
     font-size: 55px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 375px) {
+    .catchy-text{
+        font-size: 30px;
+    }
+
+    .time{
+        font-size: 50px;
+    }
 }
