@@ -24,7 +24,7 @@ class TimeToReact extends Component {
     render(){
         return <div className="d-flex align-items-center justify-content-center h-100">
             <div>
-                <div className="catchy-text">Its Time To <span className="primary-color">React</span></div>
+                <div className="catchy-text">Its Time To <span onClick={_ => this.props.onTextClicked() } className="primary-color">React</span></div>
                 <div className="time">{this.state.currentTime.toLocaleTimeString()}</div>
             </div>
         </div>

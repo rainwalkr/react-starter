@@ -13,6 +13,9 @@
     height:37px;
     border-radius: 2px;
 }
+.toggle-btn:hover{
+    background-color: #5bcbe9;
+}
 
 .reset-btn{
     padding: 5px;
@@ -25,7 +28,10 @@
     height:37px;
     border-radius: 2px;
 }
+.reset-btn:hover{
+    background-color:#eeeeee;
+}
 
 .actions{
-    margin-top: 30px;
+    margin-top: 40px;
 }

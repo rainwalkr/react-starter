@@ -83,6 +83,28 @@ class Stopwatch extends Component {
         return new Date(ms).toISOString().slice(11, -2);
     }
 
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeydown.bind(this));
+    }
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.handleKeydown.bind(this));
+    }
+
+    handleKeydown(e) {
+        switch (e.code) {
+            case 'Space':
+                this.toggle()
+                break;
+
+            case 'Enter':
+                this.reset()
+                break;
+
+            default:
+                break;
+        }
+    }
+
     render(){    
         return <div className="d-flex align-items-center justify-content-center h-100">
             <div>

@@ -6,10 +6,30 @@ import "./App.css";
 
 class App extends Component {
 
+    constructor(props){
+        super(props)
+        this.state = {
+            page:'time-to-react'
+        };
+        this.handleTextClick = this.handleTextClick.bind(this) 
+    }
+
+    handleTextClick(){
+        this.setState({
+            page:'stopwatch'
+        })
+    }
+
     render() {
+        let page
+        if (this.state.page === 'time-to-react') {
+            page = <TimeToReact onTextClicked={this.handleTextClick} />
+        } else if (this.state.page === 'stopwatch') {
+            page = <Stopwatch />
+        }
+
         return <div className="container">
-            {/* <TimeToReact /> */}
-            <Stopwatch />
+            {page}
         </div>
     }
 }
