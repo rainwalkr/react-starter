@@ -1,5 +1,8 @@
 import React,{Component} from 'react'
 import './Stopwatch.css'
+import resetImage from './reset.svg';
+import playImage from './play_arrow.svg'
+import pauseImage from './pause.svg'
 
 class Stopwatch extends Component {
 
@@ -106,8 +109,11 @@ class Stopwatch extends Component {
             <div>
                 <div className="countdown">{this.msToTime(this.state.elapsedMS)}</div>
                 <div className="d-flex justify-content-center actions">
-                    <button className="toggle-btn mr-35" onClick={this.toggle}>{this.state.status === 'ticking'? 'Pause':'Start'}</button>
-                    <button className="reset-btn" onClick={this.reset} >Reset</button>
+                    <button className="toggle-btn mr-35" onClick={this.toggle}>
+                        { this.state.status === 'ticking'? 
+                            <img src={pauseImage}/> : <img src={playImage}/> }
+                    </button>
+                    <button className="reset-btn" onClick={this.reset} ><img src={resetImage} /></button>
                 </div>
             </div>
         </div>

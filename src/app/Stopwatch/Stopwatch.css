@@ -4,7 +4,7 @@
 
 .toggle-btn{
     padding: 5px;
-    width: 75px;
+    width: 60px;
     background: #61dafb;
     font-size: 17px;
     font-family: monospace;
@@ -12,6 +12,7 @@
     color: #20232a;
     height:37px;
     border-radius: 2px;
+    outline: none;
 }
 .toggle-btn:hover{
     background-color: #5bcbe9;
@@ -19,7 +20,7 @@
 
 .reset-btn{
     padding: 5px;
-    width: 75px;
+    width: 60px;
     background: #fff;
     font-size: 17px;
     font-family: monospace;
@@ -27,6 +28,7 @@
     color: #20232a;
     height:37px;
     border-radius: 2px;
+    outline: none;
 }
 .reset-btn:hover{
     background-color:#eeeeee;

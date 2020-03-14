@@ -21,6 +21,10 @@ class TimeToReact extends Component {
         this.interval = setInterval(() => this.tick(), 1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
+
     render(){
         return <div className="d-flex align-items-center justify-content-center h-100">
             <div>
