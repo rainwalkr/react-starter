@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 479px) {
     .catchy-text{
         font-size: 30px;
     }
